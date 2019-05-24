@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Nov  5 18:14:41 2018
+# Process ID: 8488
+# Current directory: E:/BaiduNetdiskDownload/HDMI_Output_Disp/HDMI_Output_Disp
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11372 E:\BaiduNetdiskDownload\HDMI_Output_Disp\HDMI_Output_Disp\HDMI_Output_Disp.xpr
+# Log file: E:/BaiduNetdiskDownload/HDMI_Output_Disp/HDMI_Output_Disp/vivado.log
+# Journal file: E:/BaiduNetdiskDownload/HDMI_Output_Disp/HDMI_Output_Disp\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/BaiduNetdiskDownload/HDMI_Output_Disp/HDMI_Output_Disp/HDMI_Output_Disp.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/BaiduNetdiskDownload/HDMI_Output_Disp/HDMI_Output_Disp'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/xilinx/Vivado/2018.2/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'hdmi_disp' is locked:
+* Current project part 'xc7z020clg400-1' and the part 'xc7z010clg400-1' used to customize the IP 'hdmi_disp' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:10 . Memory (MB): peak = 895.156 ; gain = 189.383
+open_hw
+update_compile_order -fileset sources_1
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+open_hw_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1520.789 ; gain = 625.633
+set_property PROGRAM.FILE {E:/BaiduNetdiskDownload/HDMI_Output_Disp/HDMI_Output_Disp/HDMI_Output_Disp.runs/impl_2/HDMI_Output_Disp.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {E:/BaiduNetdiskDownload/HDMI_Output_Disp/HDMI_Output_Disp/HDMI_Output_Disp.runs/impl_2/HDMI_Output_Disp.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Nov  5 18:15:59 2018...

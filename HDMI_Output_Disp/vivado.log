@@ -1,0 +1,368 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri May 24 09:04:52 2019
+# Process ID: 6520
+# Current directory: E:/lab_work/4k/HDMI_Output_Disp
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1696 E:\lab_work\4k\HDMI_Output_Disp\HDMI_Output_Disp.xpr
+# Log file: E:/lab_work/4k/HDMI_Output_Disp/vivado.log
+# Journal file: E:/lab_work/4k/HDMI_Output_Disp\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.xpr
+INFO: [Project 1-313] Project file moved from 'E:/lab_work/文/新工科培训班教学案例/新工科培训班教学案例/HDMI_Output_Disp' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/lab_work/4k/HDMI_Output_Disp'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 905.168 ; gain = 204.633
+update_compile_order -fileset sources_1
+cd E:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/proj/
+source ./create_project.tcl
+# set proj_name "HDMI"
+# if {[info exists ::create_path]} {
+# 	set dest_dir $::create_path
+# } else {
+# 	set dest_dir [file normalize [file dirname [info script]]]
+# }
+# puts "INFO: Creating new project in $dest_dir"
+INFO: Creating new project in E:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/proj
+# cd $dest_dir
+# set part "xc7k325tffg900-2"
+# set brd_part "digilentinc.com:genesys2:part0:1.1"
+# set origin_dir ".."
+# set orig_proj_dir "[file normalize "$origin_dir/proj"]"
+# set src_dir $origin_dir/src
+# set repo_dir $origin_dir/repo
+# create_project $proj_name $dest_dir
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+# set proj_dir [get_property directory [current_project]]
+# set obj [get_projects $proj_name]
+# set_property "default_lib" "xil_defaultlib" $obj
+# set_property "part" $part $obj
+# set_property "board_part" $brd_part $obj
+# set_property "simulator_language" "Mixed" $obj
+# set_property "target_language" "VHDL" $obj
+# set_property "corecontainer.enable" "0" $obj
+# set_property "ip_cache_permissions" "read write" $obj
+# set_property "ip_output_repo" "[file normalize "$origin_dir/repo/cache"]" $obj
+# if {[string equal [get_filesets -quiet sources_1] ""]} {
+#   create_fileset -srcset sources_1
+# }
+# if {[string equal [get_filesets -quiet constrs_1] ""]} {
+#   create_fileset -constrset constrs_1
+# }
+# set obj [get_filesets sources_1]
+# set_property "ip_repo_paths" "[file normalize $repo_dir]" $obj
+# update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/repo'.
+# add_files -quiet $src_dir/hdl
+# add_files -quiet [glob -nocomplain ../src/ip/*/*.xci]
+# add_files -fileset constrs_1 -quiet $src_dir/constraints
+# if {[string equal [get_runs -quiet synth_1] ""]} {
+#   create_run -name synth_1 -part $part -flow {Vivado Synthesis 2015} -strategy "Vivado Synthesis Defaults" -constrset constrs_1
+# } else {
+#   set_property strategy "Vivado Synthesis Defaults" [get_runs synth_1]
+#   set_property flow "Vivado Synthesis 2015" [get_runs synth_1]
+# }
+# set obj [get_runs synth_1]
+# set_property "part" $part $obj
+# set_property "steps.synth_design.args.flatten_hierarchy" "none" $obj
+# set_property "steps.synth_design.args.directive" "RuntimeOptimized" $obj
+# set_property "steps.synth_design.args.fsm_extraction" "off" $obj
+# current_run -synthesis [get_runs synth_1]
+# if {[string equal [get_runs -quiet impl_1] ""]} {
+#   create_run -name impl_1 -part $part -flow {Vivado Implementation 2015} -strategy "Vivado Implementation Defaults" -constrset constrs_1 -parent_run synth_1
+# } else {
+#   set_property strategy "Vivado Implementation Defaults" [get_runs impl_1]
+#   set_property flow "Vivado Implementation 2015" [get_runs impl_1]
+# }
+# set obj [get_runs impl_1]
+# set_property "part" $part $obj
+# set_property "steps.opt_design.args.directive" "RuntimeOptimized" $obj
+# set_property "steps.place_design.args.directive" "RuntimeOptimized" $obj
+# set_property "steps.route_design.args.directive" "RuntimeOptimized" $obj
+# current_run -implementation [get_runs impl_1]
+# puts "INFO: Project created:$proj_name"
+INFO: Project created:HDMI
+# set bd_list [glob -nocomplain $src_dir/bd/*/*.bd]
+# if {[llength $bd_list] != 0} {
+#   add_files -norecurse -quiet -fileset sources_1 [glob -nocomplain $src_dir/bd/*/*.bd]
+#   open_bd_design [glob -nocomplain $src_dir/bd/*/*.bd]
+#   set design_name [get_bd_designs]
+#   set file "$origin_dir/src/bd/$design_name/$design_name.bd"
+#   set file [file normalize $file]
+#   set file_obj [get_files -of_objects [get_filesets sources_1] [list "*$file"]]
+#   if { ![get_property "is_locked" $file_obj] } {
+#     set_property "synth_checkpoint_mode" "Hierarchical" $file_obj
+#   }
+#  
+#   # Generate the wrapper 
+#   set design_name [get_bd_designs]
+#   add_files -norecurse [make_wrapper -files [get_files $design_name.bd] -top -force]
+# 
+#   set obj [get_filesets sources_1]
+#   set_property "top" "${design_name}_wrapper" $obj
+# }
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - microblaze_0_xlconcat
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding cell -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding cell -- xilinx.com:ip:axi_vdma:6.2 - axi_vdma_0
+Adding cell -- xilinx.com:ip:mdm:3.2 - mdm_1
+Adding cell -- xilinx.com:ip:microblaze:10.0 - microblaze_0
+Adding cell -- xilinx.com:ip:axi_intc:4.1 - microblaze_0_axi_intc
+Adding cell -- xilinx.com:ip:mig_7series:4.0 - mig_7series_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_pxl
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_clk_wiz_1_100M
+Adding cell -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding cell -- xilinx.com:ip:v_tc:6.1 - v_tc_0
+Adding cell -- xilinx.com:ip:v_tc:6.1 - v_tc_1
+Adding cell -- xilinx.com:ip:v_vid_in_axi4s:4.0 - v_vid_in_axi4s_0
+Adding cell -- digilentinc.com:ip:axi_dynclk:1.0 - axi_dynclk_0
+Adding cell -- digilentinc.com:ip:dvi2rgb:1.7 - dvi2rgb_0
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+Adding cell -- digilentinc.com:ip:rgb2dvi:1.3 - rgb2dvi_0
+CRITICAL WARNING: [BD 41-51] Could not find bus definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-49] Could not find abstraction definition for the interface: TMDS 
+CRITICAL WARNING: [BD 41-52] Could not find the abstraction definition specified by the vlnv: digilentinc.com:interface:tmds_rtl:1.0 
+CRITICAL WARNING: [BD 41-181] Type specified by the VLNV: 'digilentinc.com:interface:tmds_rtl:1.0', cannot be found. Interface port: 'TMDS_IN' cannot be created
+CRITICAL WARNING: [BD 41-52] Could not find the abstraction definition specified by the vlnv: digilentinc.com:interface:tmds_rtl:1.0 
+CRITICAL WARNING: [BD 41-181] Type specified by the VLNV: 'digilentinc.com:interface:tmds_rtl:1.0', cannot be found. Interface port: 'TMDS_OUT' cannot be created
+CRITICAL WARNING: [BD 41-52] Could not find the abstraction definition specified by the vlnv: digilentinc.com:interface:tmds_rtl:1.0 
+CRITICAL WARNING: [BD 41-181] Type specified by the VLNV: 'digilentinc.com:interface:tmds_rtl:1.0', cannot be found. Interface port: 'TMDS_IN' cannot be created
+CRITICAL WARNING: [BD 41-52] Could not find the abstraction definition specified by the vlnv: digilentinc.com:interface:tmds_rtl:1.0 
+CRITICAL WARNING: [BD 41-181] Type specified by the VLNV: 'digilentinc.com:interface:tmds_rtl:1.0', cannot be found. Interface port: 'TMDS_OUT' cannot be created
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_ds
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - dlmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - dlmb_v10
+Adding cell -- xilinx.com:ip:lmb_bram_if_cntlr:4.0 - ilmb_bram_if_cntlr
+Adding cell -- xilinx.com:ip:lmb_v10:3.0 - ilmb_v10
+Adding cell -- xilinx.com:ip:blk_mem_gen:8.3 - lmb_bram
+Successfully read diagram <system> from BD file <../src/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1114.395 ; gain = 114.398
+ERROR: [BD 41-1665] Unable to generate top-level wrapper HDL for the BD-design 'system.bd' is locked. Locked reason(s):
+* Block design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
+List of locked IPs: 
+system_auto_us_1
+system_microblaze_0_0
+system_axi_dynclk_0_0
+system_axi_mem_intercon_0
+system_axi_gpio_0_0
+system_v_tc_0_0
+system_ilmb_bram_if_cntlr_0
+system_axi_timer_0_0
+system_v_axi4s_vid_out_0_0
+system_axi_uartlite_0_0
+system_mdm_1_0
+system_axi_vdma_0_0
+system_rgb2dvi_0_0
+system_dvi2rgb_0_0
+system_microblaze_0_axi_intc_0
+system_microblaze_0_axi_periph_0
+system_auto_us_0
+system_dlmb_bram_if_cntlr_0
+system_lmb_bram_0
+system_microblaze_0_xlconcat_0
+system_mig_7series_0_0
+system_proc_sys_reset_pxl_0
+system_rst_clk_wiz_1_100M_0
+system_v_tc_1_0
+system_v_vid_in_axi4s_0_0
+system_xbar_0
+system_xbar_1
+system_auto_ds_0
+
+ERROR: [Common 17-39] 'make_wrapper' failed due to earlier errors.
+
+    while executing
+"make_wrapper -files [get_files $design_name.bd] -top -force"
+    invoked from within
+"if {[llength $bd_list] != 0} {
+  add_files -norecurse -quiet -fileset sources_1 [glob -nocomplain $src_dir/bd/*/*.bd]
+  open_bd_design [glob -nocompla..."
+    (file "./create_project.tcl" line 125)
+update_compile_order -fileset sources_1
+report_ip_status -name ip_status 
+upgrade_ip [get_ips]
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_axi_dynclk_0_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_dvi2rgb_0_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_rgb2dvi_0_0'
+Upgrading 'E:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/system.bd'
+INFO: [IP_Flow 19-3422] Upgraded system_axi_gpio_0_0 (AXI GPIO 2.0) from revision 13 to revision 19
+INFO: [IP_Flow 19-3422] Upgraded system_axi_mem_intercon_0 (AXI Interconnect 2.1) from revision 12 to revision 18
+INFO: [IP_Flow 19-3422] Upgraded system_axi_timer_0_0 (AXI Timer 2.0) from revision 13 to revision 19
+INFO: [IP_Flow 19-3422] Upgraded system_axi_uartlite_0_0 (AXI Uartlite 2.0) from revision 15 to revision 21
+INFO: [IP_Flow 19-1972] Upgraded system_axi_vdma_0_0 from AXI Video Direct Memory Access 6.2 to AXI Video Direct Memory Access 6.3
+INFO: [IP_Flow 19-3422] Upgraded system_dlmb_bram_if_cntlr_0 (LMB BRAM Controller 4.0) from revision 10 to revision 15
+INFO: [IP_Flow 19-3422] Upgraded system_ilmb_bram_if_cntlr_0 (LMB BRAM Controller 4.0) from revision 10 to revision 15
+INFO: [Device 21-403] Loading part xc7k325tffg900-2
+INFO: [IP_Flow 19-1972] Upgraded system_lmb_bram_0 from Block Memory Generator 8.3 to Block Memory Generator 8.4
+INFO: [IP_Flow 19-3422] Upgraded system_mdm_1_0 (MicroBlaze Debug Module (MDM) 3.2) from revision 8 to revision 14
+INFO: [IP_Flow 19-3422] Upgraded system_microblaze_0_0 (MicroBlaze 10.0) from revision 1 to revision 7
+INFO: [IP_Flow 19-3422] Upgraded system_microblaze_0_axi_intc_0 (AXI Interrupt Controller 4.1) from revision 9 to revision 11
+INFO: [IP_Flow 19-3422] Upgraded system_microblaze_0_axi_periph_0 (AXI Interconnect 2.1) from revision 12 to revision 18
+INFO: [IP_Flow 19-3422] Upgraded system_microblaze_0_xlconcat_0 (Concat 2.1) from revision 2 to revision 1
+INFO: [IP_Flow 19-1972] Upgraded system_mig_7series_0_0 from Memory Interface Generator (MIG 7 Series) 4.0 to Memory Interface Generator (MIG 7 Series) 4.1
+INFO: [IP_Flow 19-3422] Upgraded system_proc_sys_reset_pxl_0 (Processor System Reset 5.0) from revision 10 to revision 12
+INFO: [IP_Flow 19-3422] Upgraded system_rst_clk_wiz_1_100M_0 (Processor System Reset 5.0) from revision 10 to revision 12
+INFO: [IP_Flow 19-3422] Upgraded system_v_axi4s_vid_out_0_0 (AXI4-Stream to Video Out 4.0) from revision 5 to revision 9
+INFO: [IP_Flow 19-3422] Upgraded system_v_tc_0_0 (Video Timing Controller 6.1) from revision 10 to revision 12
+INFO: [IP_Flow 19-3422] Upgraded system_v_tc_1_0 (Video Timing Controller 6.1) from revision 10 to revision 12
+INFO: [IP_Flow 19-3422] Upgraded system_v_vid_in_axi4s_0_0 (Video In to AXI4-Stream 4.0) from revision 5 to revision 8
+CRITICAL WARNING: [filemgmt 20-1366] Unable to reset target(s) for the following file is locked: E:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/system.bd
+Locked reason: 
+* Block design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
+List of locked IPs: 
+system_axi_dynclk_0_0
+system_rgb2dvi_0_0
+system_dvi2rgb_0_0
+
+Wrote  : <E:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/system.bd> 
+Wrote  : <E:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ui/bd_c954508f.ui> 
+upgrade_ip: Time (s): cpu = 00:00:28 ; elapsed = 00:01:21 . Memory (MB): peak = 1519.520 ; gain = 400.242
+e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_axi_mem_intercon_0/system_axi_mem_intercon_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_axi_timer_0_0/system_axi_timer_0_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_dlmb_bram_if_cntlr_0/system_dlmb_bram_if_cntlr_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_ilmb_bram_if_cntlr_0/system_ilmb_bram_if_cntlr_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_lmb_bram_0/system_lmb_bram_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_mdm_1_0/system_mdm_1_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_microblaze_0_0/system_microblaze_0_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_microblaze_0_axi_intc_0/system_microblaze_0_axi_intc_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_microblaze_0_axi_periph_0/system_microblaze_0_axi_periph_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_microblaze_0_xlconcat_0/system_microblaze_0_xlconcat_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_mig_7series_0_0/system_mig_7series_0_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_proc_sys_reset_pxl_0/system_proc_sys_reset_pxl_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_rst_clk_wiz_1_100M_0/system_rst_clk_wiz_1_100M_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_v_tc_0_0/system_v_tc_0_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_v_tc_1_0/system_v_tc_1_0.xci e:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/ip/system_v_vid_in_axi4s_0_0/system_v_vid_in_axi4s_0_0.xci
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.2
+  **** Build date : Jun 14 2018-20:42:52
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/200300A8C5D1B
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1435] Device xc7k325t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {E:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/hw_handoff/system_wrapper.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2190.773 ; gain = 0.672
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+INFO: [Labtools 27-1434] Device xc7k325t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Synthesis target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+E:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/system.bd
+
+WARNING: [Runs 36-337] The following IPs are either missing output products or output products are not up-to-date for Implementation target. Since these IPs are locked, no update to the output products can be done. 
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+E:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/system.bd
+
+ERROR: [Common 17-70] Application Exception: Top module not set for fileset 'sources_1'. Please ensure that a valid value is provided for 'top'. The value for 'top' can be set/changed using the 'Top Module Name' field under 'Project Settings', or using the 'set_property top' Tcl command (e.g. set_property top <name> [current_fileset]).
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/200300A8C5D1B
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/200300A8C5D1B
+INFO: [Labtools 27-1435] Device xc7k325t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+upgrade_ip [get_ips]
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_axi_dynclk_0_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_dvi2rgb_0_0'
+WARNING: [Coretcl 2-1044] No upgrade is available for 'system_rgb2dvi_0_0'
+WARNING: [Coretcl 2-1042] No IP was identified for upgrade.
+open_bd_design {E:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/system.bd}
+validate_bd_design
+ERROR: [BD 5-336] This command cannot be run, as the BD-design is locked. Locked reason(s):
+* Block design contains locked IPs. Please run report_ip_status for more details and recommendations on how to fix this issue. 
+List of locked IPs: 
+system_axi_dynclk_0_0
+system_rgb2dvi_0_0
+system_dvi2rgb_0_0
+
+ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
+current_project HDMI_Output_Disp
+update_ip_catalog -rebuild -scan_changes
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/lab_work/4k/HDMI_Output_Disp'.
+report_ip_status -name ip_status
+current_project HDMI
+current_project HDMI_Output_Disp
+create_run impl_3 -parent_run synth_1 -flow {Vivado Implementation 2018} -strategy {Vivado Implementation Defaults} -report_strategy {Vivado Implementation Default Reports}
+Run is defaulting to parent run srcset: sources_1
+Run is defaulting to parent run constrset: constrs_1
+Run is defaulting to parent run part: xc7z020clg400-1
+current_run [get_runs impl_3]
+set_property board_part digilentinc.com:genesys2:part0:1.1 [current_project]
+WARNING: [Project 1-153] The current project device 'xc7z020clg400-1' does not match with the device on the 'DIGILENTINC.COM:GENESYS2:PART0:1.1' board part. A device change to match the device on 'DIGILENTINC.COM:GENESYS2:PART0:1.1' board part is being done. Please upgrade the IP in the project via the upgrade_ip command or by selecting Reports => Reports IP Status.
+INFO: [Project 1-152] Project part set to kintex7 (xc7k325tffg900-2)
+current_project HDMI
+current_project HDMI_Output_Disp
+update_ip_catalog
+current_project HDMI
+current_project HDMI_Output_Disp
+update_ip_catalog
+upgrade_ip [get_ips]
+Upgrading 'hdmi_disp'
+INFO: [IP_Flow 19-3420] Updated hdmi_disp to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'hdmi_disp'...
+Upgrading 'video_pll'
+INFO: [IP_Flow 19-3420] Updated video_pll to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'video_pll'...
+upgrade_ip: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 2272.996 ; gain = 27.113
+e:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip/hdmi_disp/hdmi_disp.xci e:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip/video_pll/video_pll.xci
+current_project HDMI
+current_project HDMI_Output_Disp
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0 -dir e:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip
+set_property -dict [list CONFIG.CLK_IN1_BOARD_INTERFACE {sys_diff_clock} CONFIG.RESET_BOARD_INTERFACE {Custom} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.PRIM_SOURCE {Differential_clock_capable_pin} CONFIG.PRIM_IN_FREQ {200.000} CONFIG.CLKIN1_JITTER_PS {50.0} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {5.000} CONFIG.MMCM_CLKIN1_PERIOD {5.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_CLKOUT0_DIVIDE_F {8.000} CONFIG.CLKOUT1_JITTER {107.523} CONFIG.CLKOUT1_PHASE_ERROR {89.971}] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files e:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_wiz_0'...
+update_compile_order -fileset sources_1
+generate_target all [get_files  e:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_wiz_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_wiz_0'...
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files e:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs -jobs 4 clk_wiz_0_synth_1
+[Fri May 24 09:30:40 2019] Launched clk_wiz_0_synth_1...
+Run output will be captured here: E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.runs/clk_wiz_0_synth_1/runme.log
+export_simulation -of_objects [get_files e:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.ip_user_files/sim_scripts -ip_user_files_dir E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.ip_user_files -ipstatic_source_dir E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Modelsim_10_4_se/Vivado_2017.3_lib} {questa=E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.cache/compile_simlib/questa} {riviera=E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.cache/compile_simlib/riviera} {activehdl=E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project HDMI
+current_project HDMI_Output_Disp
+reset_run synth_1
+launch_runs impl_3 -to_step write_bitstream -jobs 4
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'hdmi_disp'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'video_pll'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'video_pll'...
+[Fri May 24 09:37:14 2019] Launched video_pll_synth_1, hdmi_disp_synth_1, synth_1...
+Run output will be captured here:
+video_pll_synth_1: E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.runs/video_pll_synth_1/runme.log
+hdmi_disp_synth_1: E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.runs/hdmi_disp_synth_1/runme.log
+synth_1: E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.runs/synth_1/runme.log
+[Fri May 24 09:37:14 2019] Launched impl_3...
+Run output will be captured here: E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.runs/impl_3/runme.log
+launch_runs: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 2335.055 ; gain = 0.000
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/200300A8C5D1B

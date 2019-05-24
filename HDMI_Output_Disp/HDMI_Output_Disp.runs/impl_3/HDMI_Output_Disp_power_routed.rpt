@@ -1,0 +1,178 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date             : Fri May 24 09:40:56 2019
+| Host             : DESKTOP-drs running 64-bit major release  (build 9200)
+| Command          : report_power -file HDMI_Output_Disp_power_routed.rpt -pb HDMI_Output_Disp_power_summary_routed.pb -rpx HDMI_Output_Disp_power_routed.rpx
+| Design           : HDMI_Output_Disp
+| Device           : xc7k325tffg900-2
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.642        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.479        |
+| Device Static (W)        | 0.162        |
+| Effective TJA (C/W)      | 1.8          |
+| Max Ambient (C)          | 83.9         |
+| Junction Temperature (C) | 26.1         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Clocks         |     0.018 |       13 |       --- |             --- |
+| Slice Logic    |    <0.001 |      433 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      169 |    203800 |            0.08 |
+|   Register     |    <0.001 |      179 |    407600 |            0.04 |
+|   CARRY4       |    <0.001 |        9 |     50950 |            0.02 |
+|   F7/F8 Muxes  |    <0.001 |        2 |    203800 |           <0.01 |
+|   Others       |     0.000 |       38 |       --- |             --- |
+| Signals        |     0.002 |      319 |       --- |             --- |
+| MMCM           |     0.313 |        3 |        10 |           30.00 |
+| I/O            |     0.147 |       11 |       500 |            2.20 |
+| Static Power   |     0.162 |          |           |                 |
+| Total          |     0.642 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.098 |       0.027 |      0.071 |
+| Vccaux    |       1.800 |     0.203 |       0.174 |      0.028 |
+| Vcco33    |       3.300 |     0.043 |       0.042 |      0.001 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.8                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.3                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++----------------------+--------------------------------------------------------+-----------------+
+| Clock                | Domain                                                 | Constraint (ns) |
++----------------------+--------------------------------------------------------+-----------------+
+| CLKFBIN_2            | hdmi_disp_inst/U0/ClockGenInternal.ClockGenX/CLKFBIN   |             6.1 |
+| PixelClkIO_2         | hdmi_disp_inst/U0/ClockGenInternal.ClockGenX/PixelClk  |             6.1 |
+| SerialClkIO_2        | hdmi_disp_inst/U0/ClockGenInternal.ClockGenX/SerialClk |             1.2 |
+| clk_out1_clk_wiz_0   | clk125m/inst/clk_out1                                  |             8.0 |
+| clk_out1_clk_wiz_0   | clk125m/inst/clk_out1_clk_wiz_0                        |             8.0 |
+| clk_out1_video_pll_1 | video_pll_inst/inst/clk_out1                           |            13.5 |
+| clk_out1_video_pll_1 | video_pll_inst/inst/clk_out1_video_pll                 |            13.5 |
+| clkfbout_clk_wiz_0   | clk125m/inst/clkfbout_clk_wiz_0                        |             5.0 |
+| clkfbout_video_pll_1 | video_pll_inst/inst/clkfbout_video_pll                 |            56.0 |
+| sysclk_p             | sysclk_p                                               |             5.0 |
++----------------------+--------------------------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++--------------------------------------+-----------+
+| Name                                 | Power (W) |
++--------------------------------------+-----------+
+| HDMI_Output_Disp                     |     0.479 |
+|   clk125m                            |     0.113 |
+|     inst                             |     0.113 |
+|   color_bar_inst                     |    <0.001 |
+|   hdmi_disp_inst                     |     0.234 |
+|     U0                               |     0.234 |
+|       ClockGenInternal.ClockGenX     |     0.078 |
+|         LockLostReset                |    <0.001 |
+|           SyncAsyncx                 |    <0.001 |
+|         PLL_LockSyncAsync            |    <0.001 |
+|       ClockSerializer                |     0.036 |
+|       DataEncoders[0].DataEncoder    |    <0.001 |
+|       DataEncoders[0].DataSerializer |     0.039 |
+|       DataEncoders[1].DataEncoder    |     0.001 |
+|       DataEncoders[1].DataSerializer |     0.039 |
+|       DataEncoders[2].DataEncoder    |     0.001 |
+|       DataEncoders[2].DataSerializer |     0.039 |
+|       LockLostReset                  |    <0.001 |
+|         SyncAsyncx                   |    <0.001 |
+|   video_pll_inst                     |     0.131 |
+|     inst                             |     0.131 |
++--------------------------------------+-----------+
+
+

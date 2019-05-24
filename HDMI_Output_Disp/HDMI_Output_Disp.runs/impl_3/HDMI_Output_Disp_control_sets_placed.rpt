@@ -1,0 +1,74 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Fri May 24 09:40:10 2019
+| Host         : DESKTOP-drs running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file HDMI_Output_Disp_control_sets_placed.rpt
+| Design       : HDMI_Output_Disp
+| Device       : xc7k325t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |     8 |
+| Unused register locations in slices containing registers |    18 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      8 |            1 |
+|    16+ |            6 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             194 |           36 |
+| No           | No                    | Yes                    |              12 |            2 |
+| No           | Yes                   | No                     |             106 |           19 |
+| Yes          | No                    | No                     |              24 |            4 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              22 |            3 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+-------------------------------------+--------------------------------------------------------------------------------------+------------------+----------------+
+|          Clock Signal         |            Enable Signal            |                                   Set/Reset Signal                                   | Slice Load Count | Bel Load Count |
++-------------------------------+-------------------------------------+--------------------------------------------------------------------------------------+------------------+----------------+
+|  video_pll_inst/inst/clk_out1 |                                     | hdmi_disp_inst/U0/ClockGenInternal.ClockGenX/in0                                     |                1 |              4 |
+|  video_pll_inst/inst/clk_out1 |                                     | hdmi_disp_inst/U0/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages[1] |                1 |              8 |
+|  video_pll_inst/inst/clk_out1 |                                     | hdmi_disp_inst/U0/DataEncoders[0].DataEncoder/pDataOutRaw[9]_i_1__1_n_0              |                3 |             20 |
+|  video_pll_inst/inst/clk_out1 |                                     | color_bar_inst/h_cnt[11]_i_1_n_0                                                     |                3 |             22 |
+|  video_pll_inst/inst/clk_out1 | color_bar_inst/v_cnt                | color_bar_inst/v_cnt[11]_i_1_n_0                                                     |                3 |             22 |
+|  video_pll_inst/inst/clk_out1 | color_bar_inst/active_x[11]_i_1_n_0 |                                                                                      |                4 |             24 |
+|  video_pll_inst/inst/clk_out1 |                                     | hdmi_disp_inst/U0/DataEncoders[0].DataEncoder/SR[0]                                  |               13 |             64 |
+|  video_pll_inst/inst/clk_out1 |                                     |                                                                                      |               36 |            194 |
++-------------------------------+-------------------------------------+--------------------------------------------------------------------------------------+------------------+----------------+
+
+

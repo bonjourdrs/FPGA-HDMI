@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri May 24 09:39:07 2019
+# Process ID: 10320
+# Current directory: E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.runs/impl_3
+# Command line: vivado.exe -log HDMI_Output_Disp.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source HDMI_Output_Disp.tcl -notrace
+# Log file: E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.runs/impl_3/HDMI_Output_Disp.vdi
+# Journal file: E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.runs/impl_3\vivado.jou
+#-----------------------------------------------------------
+source HDMI_Output_Disp.tcl -notrace

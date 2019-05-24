@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="hdmi_disp_synth_1" LaunchPart="xc7k325tffg900-2" LaunchTime="1558661832">
+  <File Type="PA-TCL" Name="hdmi_disp.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="hdmi_disp_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="hdmi_disp_reports.tcl"/>
+  <File Type="RDS-RDS" Name="hdmi_disp.vds"/>
+  <File Type="RDS-UTIL" Name="hdmi_disp_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="hdmi_disp_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="hdmi_disp.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="hdmi_disp_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="hdmi_disp_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hdmi_disp">
+    <File Path="$PSRCDIR/sources_1/ip/hdmi_disp/hdmi_disp.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="hdmi_disp"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hdmi_disp">
+    <File Path="$PSRCDIR/sources_1/ip/hdmi_disp/hdmi_disp.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="hdmi_disp"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

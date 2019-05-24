@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed May 22 11:13:51 2019
+# Process ID: 13848
+# Current directory: E:/lab_work/文/新工科培训班教学案例/新工科培训班教学案例/HDMI_Output_Disp
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5380 E:\lab_work\文\新工科培训班教学案例\新工科培训班教学案例\HDMI_Output_Disp\HDMI_Output_Disp.xpr
+# Log file: E:/lab_work/文/新工科培训班教学案例/新工科培训班教学案例/HDMI_Output_Disp/vivado.log
+# Journal file: E:/lab_work/文/新工科培训班教学案例/新工科培训班教学案例/HDMI_Output_Disp\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/lab_work/文/新工科培训班教学案例/新工科培训班教学案例/HDMI_Output_Disp/HDMI_Output_Disp.xpr
+INFO: [Project 1-313] Project file moved from 'E:/BaiduNetdiskDownload/HDMI_Output_Disp/HDMI_Output_Disp' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/lab_work/文/新工科培训班教学案例/新工科培训班教学案例/HDMI_Output_Disp'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'hdmi_disp' is locked:
+* Current project part 'xc7z020clg400-1' and the part 'xc7z010clg400-1' used to customize the IP 'hdmi_disp' do not match.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 832.012 ; gain = 111.219
+update_compile_order -fileset sources_1
+upgrade_ip [get_ips]
+Upgrading 'hdmi_disp'
+INFO: [Project 1-386] Moving file 'E:/lab_work/文/新工科培训班教学案例/新工科培训班教学案例/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip/hdmi_disp/hdmi_disp.xci' from fileset 'hdmi_disp' to fileset 'sources_1'.
+INFO: [IP_Flow 19-3420] Updated hdmi_disp to use current project options
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'hdmi_disp'...
+e:/lab_work/文/新工科培训班教学案例/新工科培训班教学案例/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip/hdmi_disp/hdmi_disp.xci
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May 22 23:17:11 2019...

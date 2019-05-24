@@ -1,0 +1,66 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri May 24 09:04:52 2019
+# Process ID: 6520
+# Current directory: E:/lab_work/4k/HDMI_Output_Disp
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1696 E:\lab_work\4k\HDMI_Output_Disp\HDMI_Output_Disp.xpr
+# Log file: E:/lab_work/4k/HDMI_Output_Disp/vivado.log
+# Journal file: E:/lab_work/4k/HDMI_Output_Disp\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.xpr
+update_compile_order -fileset sources_1
+cd E:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/proj/
+source ./create_project.tcl
+update_compile_order -fileset sources_1
+report_ip_status -name ip_status 
+upgrade_ip [get_ips]
+open_hw
+connect_hw_server
+open_hw_target
+current_hw_device [get_hw_devices xc7k325t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7k325t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7k325t_0]
+set_property PROGRAM.FILE {E:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/hw_handoff/system_wrapper.bit} [get_hw_devices xc7k325t_0]
+program_hw_devices [get_hw_devices xc7k325t_0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+refresh_hw_device [lindex [get_hw_devices xc7k325t_0] 0]
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+upgrade_ip [get_ips]
+open_bd_design {E:/lab_work/4k/Genesys2/Genesys-2-HDMI-master/src/bd/system/system.bd}
+validate_bd_design
+current_project HDMI_Output_Disp
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project HDMI
+current_project HDMI_Output_Disp
+create_run impl_3 -parent_run synth_1 -flow {Vivado Implementation 2018} -strategy {Vivado Implementation Defaults} -report_strategy {Vivado Implementation Default Reports}
+current_run [get_runs impl_3]
+set_property board_part digilentinc.com:genesys2:part0:1.1 [current_project]
+current_project HDMI
+current_project HDMI_Output_Disp
+update_ip_catalog
+current_project HDMI
+current_project HDMI_Output_Disp
+update_ip_catalog
+upgrade_ip [get_ips]
+current_project HDMI
+current_project HDMI_Output_Disp
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name clk_wiz_0 -dir e:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip
+set_property -dict [list CONFIG.CLK_IN1_BOARD_INTERFACE {sys_diff_clock} CONFIG.RESET_BOARD_INTERFACE {Custom} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.PRIM_SOURCE {Differential_clock_capable_pin} CONFIG.PRIM_IN_FREQ {200.000} CONFIG.CLKIN1_JITTER_PS {50.0} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.MMCM_CLKFBOUT_MULT_F {5.000} CONFIG.MMCM_CLKIN1_PERIOD {5.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_CLKOUT0_DIVIDE_F {8.000} CONFIG.CLKOUT1_JITTER {107.523} CONFIG.CLKOUT1_PHASE_ERROR {89.971}] [get_ips clk_wiz_0]
+generate_target {instantiation_template} [get_files e:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  e:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files e:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] e:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs -jobs 4 clk_wiz_0_synth_1
+export_simulation -of_objects [get_files e:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.ip_user_files/sim_scripts -ip_user_files_dir E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.ip_user_files -ipstatic_source_dir E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Modelsim_10_4_se/Vivado_2017.3_lib} {questa=E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.cache/compile_simlib/questa} {riviera=E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.cache/compile_simlib/riviera} {activehdl=E:/lab_work/4k/HDMI_Output_Disp/HDMI_Output_Disp.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+current_project HDMI
+current_project HDMI_Output_Disp
+reset_run synth_1
+launch_runs impl_3 -to_step write_bitstream -jobs 4
+wait_on_run impl_3
